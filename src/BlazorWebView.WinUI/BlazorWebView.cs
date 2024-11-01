@@ -286,9 +286,16 @@ public class BlazorWebView : Control, IAsyncDisposable
     /// <param name="workItem">The action to call.</param>
     /// <returns>Returns a <see cref="Task"/> representing <c>true</c> if the <paramref name="workItem"/> was called, or <c>false</c> if it was not called because Blazor is not currently running.</returns>
     /// <exception cref="ArgumentNullException">Thrown if <paramref name="workItem"/> is <c>null</c>.</exception>
-    public virtual Task<bool> TryDispatchAsync(Action<IServiceProvider> workItem)
+    public virtual async Task<bool> TryDispatchAsync(Action<IServiceProvider> workItem)
     {
-        throw new NotImplementedException();
+        ArgumentNullException.ThrowIfNull(workItem);
+
+        if(_webviewManager is null)
+        {
+            return false;
+        }
+
+        return await _webviewManager.TryDispatchAsync(workItem);
     }
 
     private void CheckDisposed()
@@ -314,6 +321,7 @@ public class BlazorWebView : Control, IAsyncDisposable
             _webviewManager = null;
         }
 
+        //_webview?.Dispose();
         _webview = null;
     }
 
