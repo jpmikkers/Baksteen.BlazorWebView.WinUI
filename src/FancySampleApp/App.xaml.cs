@@ -32,6 +32,7 @@ namespace FancySampleApp
         /// </summary>
         public App()
         {
+            //Environment.SetEnvironmentVariable("WEBVIEW2_DEFAULT_BACKGROUND_COLOR", "00000000");
             this.InitializeComponent();
         }
 

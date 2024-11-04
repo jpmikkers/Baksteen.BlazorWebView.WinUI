@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using Windows.UI;
 using WebView2Control = Microsoft.UI.Xaml.Controls.WebView2;
 
 namespace Microsoft.AspNetCore.Components.WebView.WinUI;
@@ -69,6 +71,7 @@ public class BlazorWebView : Control, IAsyncDisposable
     /// </summary>
     public BlazorWebView()
     {
+        Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
         DefaultStyleKey = typeof(BlazorWebView);
 
         ComponentsDispatcher = new WinUIDispatcher(DispatcherQueue);
