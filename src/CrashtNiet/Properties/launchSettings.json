@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CrashtNiet (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CrashtNiet (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

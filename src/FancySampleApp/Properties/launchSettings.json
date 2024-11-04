@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "FancySampleApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FancySampleApp (Unpackaged)": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
