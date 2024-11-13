@@ -19,7 +19,7 @@ namespace Microsoft.AspNetCore.Components.WebView.WinUI;
 /// <summary>
 /// A WinUI control for hosting Razor components locally in Windows desktop applications.
 /// </summary>
-public class BlazorWebView : Control, IAsyncDisposable
+public partial class BlazorWebView : Control, IAsyncDisposable
 {
     #region Dependency property definitions
     /// <summary>
@@ -293,16 +293,13 @@ public class BlazorWebView : Control, IAsyncDisposable
 
     private void CheckDisposed()
     {
-        if (_isDisposed)
-        {
-            throw new ObjectDisposedException(GetType().Name);
-        }
+        ObjectDisposedException.ThrowIf(_isDisposed,this);
     }
 
     /// <summary>
     /// Allows asynchronous disposal of the <see cref="BlazorWebView" />.
     /// </summary>
-    protected virtual async ValueTask DisposeAsyncCore()
+    protected async virtual ValueTask DisposeAsyncCore()
     {
         // Dispose this component's contents that user-written disposal logic and Razor component disposal logic will
         // complete first. Then dispose the WebView2 control. This order is critical because once the WebView2 is
