@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250228001" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250310001" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView" Version="9.0.3" />
     <PackageReference Include="CommunityToolkit.WinUI.Extensions" Version="8.1.240916" />
