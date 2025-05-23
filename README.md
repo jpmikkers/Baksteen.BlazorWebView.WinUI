@@ -1,5 +1,5 @@
 # BlazorWebView.WinUI
- Build WinUI apps with Blazor and WebView2.
+ Build WinUI Blazor hybrid apps with this BlazorWebView component.
 
 
 https://github.com/w-ahmad/BlazorWebView.WinUI/assets/17172092/ee581dab-cd60-49e8-b11e-ff7ca23784c2
