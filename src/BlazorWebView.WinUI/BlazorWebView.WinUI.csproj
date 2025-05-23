@@ -29,9 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250401001" />
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebView" Version="9.0.4" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250513003" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView" Version="9.0.5" />
     <PackageReference Include="CommunityToolkit.WinUI.Extensions" Version="8.2.250402" />
   </ItemGroup>
 </Project>
